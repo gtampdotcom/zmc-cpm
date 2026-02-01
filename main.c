@@ -4,15 +4,16 @@
 AppState App;
 
 unsigned char wait_key_hw(void) {
-    #asm
-    loophw_zmc:
-        in a, (025h)
-        and 01h
-        jr z, loophw_zmc
-        in a, (020h)
-        ld l, a
-        ld h, 0
-    #endasm
+	#asm
+    loop_bdos_kbd:
+        ld  c, 06h
+        ld  e, 0FFh
+        call 0005h
+        or  a
+        jr  z, loop_bdos_kbd
+        ld  l, a
+        ld  h, 0
+	#endasm
 }
 
 void refresh_ui() {
