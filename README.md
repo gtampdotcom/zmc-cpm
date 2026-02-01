@@ -1,5 +1,7 @@
 # ZMC - Z80 Managed Commander (Soft Edition)
 
+ZMC is a lightweight and efficient file manager designed specifically for CP/M operating systems running on Z80 processors. It is optimized for terminals with 32-line VT100/VT102 emulation (such as Minicom or real hardware).
+
 **ZMC** es un gestor de archivos ligero y eficiente diseñado específicamente para sistemas operativos **CP/M** corriendo en procesadores **Z80**. Optimizado para terminales con emulación **VT100/VT102** de 32 líneas (como Minicom o hardware real).
 
 ---
@@ -18,5 +20,6 @@
 Este proyecto utiliza el compilador **z88dk** en un entorno Linux.
 
 ```bash
+# Requires z88dk zcc to compile
 # Para compilar, simplemente corre el script de taller:
 ./make.sh
